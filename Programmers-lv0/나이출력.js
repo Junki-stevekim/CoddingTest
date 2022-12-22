@@ -5,6 +5,7 @@
 // 0 < age ≤ 120
 // 나이는 태어난 연도에 1살이며 1년마다 1씩 증가합니다.
 
+
 function solution(age) {
     var answer = 2022 - age + 1; //현재년도 -현재나이 +1 -> 1년마다 1씩증가하므로 +!을해준다
     return answer;
