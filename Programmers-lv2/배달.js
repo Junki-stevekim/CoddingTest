@@ -57,6 +57,5 @@ function solution(N, road, K) {
         }
       });
     }
-  
-    return arr.filter((item) => item <= K).length; // 경로의 제한인 K보다 cost가 작은 경로의 수를 반환을 함
-
+    return arr.filter((item) => item <= K).length; // 경로의 제한인 K보다 cost가 작은 경로의 수를 반환을 함.
+  }
