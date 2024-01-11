@@ -29,8 +29,6 @@
 // 주어진 마을과 도로의 모양은 아래 그림과 같습니다.
 // 배달_3_njc7kq.png
 // 1번 마을에서 배달에 4시간 이하가 걸리는 마을은 [1, 2, 3, 5] 4개이므로 4를 return 합니다.
-
-
 function solution(N, road, K) {
     const arr = Array(N + 1).fill(Number.MAX_SAFE_INTEGER);
     const lines = Array.from(Array(N + 1), () => []);
@@ -41,13 +39,10 @@ function solution(N, road, K) {
       lines[a].push({ to: b, cost: c });
       lines[b].push({ to: a, cost: c });
     });
-  
     let queue = [{ to: 1, cost: 0 }];
     arr[1] = 0;
-  
     while (queue.length) {
       let { to } = queue.pop();
-  
       lines[to].forEach((next) => {
         // 모든 경로를 탐색
         if (arr[next.to] > arr[to] + next.cost) {
